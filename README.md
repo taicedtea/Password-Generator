@@ -1,1 +1,2 @@
-# Password Generator Starter Code
+# Password Generator
+This is a password generator built using primarily JavaScript
