@@ -76,6 +76,10 @@ h2 {
   clear: both;
 }
 
+#passwordLength {
+  width: 60px;
+}
+
 .btn {
   border: none;
   background-color: rgb(176, 75, 75);
