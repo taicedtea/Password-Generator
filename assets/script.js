@@ -59,6 +59,7 @@ function generatePassword(length, lower, upper, num, special) {
 
   //returns nothing if no boxes are clicked
   if(typesCount === 0){
+    alert('Please click at least one option for text type');
     return ' ';
   }
 
