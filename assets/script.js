@@ -28,26 +28,26 @@ generateBtn.addEventListener('click', () => {
 });
 
 //copies generated password to clipboard
-// thank you https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
+// Found at https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
 copyBtn.addEventListener('click', () => {
-  console.log(password.innerText);
-  // const textArea = document.createElement('text');
-  
-  // if(!password) {
-  //   return;
-  // }
+  password.select();
+  password.setSelectionRange(0,125);
 
-  // textArea.value = 
-  // document.body.appendChild(textArea);
-  // textArea.select();
-  // document.execCommand('copy');
-  // textArea.remove();
+  navigator.clipboard.writeText(password.value);
+
+  alert('Text copied to clipboard');
 
 })
 
 // generator function
 function generatePassword(length, lower, upper, num, special) {
   let generatedPassword = '';
+
+  // Limits password length
+  if (length < 8 || length > 124) {
+    alert('Please enter length value greater than 8 and less than 128');
+    return '';
+  }
    
   //checkes how many values are checked
   const typesCount = lower + upper + num + special;
